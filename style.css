@@ -1,0 +1,232 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #2b2b2b;
+  background: #f5f3fa;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ---- Header / Nav ---- */
+
+header {
+  background: #6b21a8;
+  color: #fff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  position: relative;
+}
+
+.profile_name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+}
+
+header .profile p {
+  font-size: 13px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+.contact-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  filter: brightness(0) invert(1); /* renders the icon white to match the header text */
+}
+
+header nav {
+  display: flex;
+  gap: 28px;
+  font-size: 15px;
+}
+
+header nav a:hover,
+.topmenu a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.iconbutton {
+  font-size: 22px;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.iconbutton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ---- Sections ---- */
+
+section {
+  max-width: 1000px;
+  margin: 24px auto;
+  background: #fff;
+  border: 1px solid #e4defa;
+  border-radius: 6px;
+  padding: 40px;
+}
+
+.section-title {
+  color: #6b21a8;
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+/* ---- About ---- */
+
+.about {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #6b21a8;
+  flex-shrink: 0;
+}
+
+.about h2 { color: #6b21a8; font-size: 28px; margin-bottom: 10px; }
+.about p { color: #555; line-height: 1.6; max-width: 620px; }
+
+/* ---- Projects ---- */
+
+.project {
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+.project:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.project h3 { font-size: 17px; margin-bottom: 6px; }
+.project ul { padding-left: 20px; color: #444; line-height: 1.5; }
+
+/* ---- Skills ---- */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+.skill {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.skill img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 8px;
+}
+
+.skill-name { font-weight: 600; font-size: 14px; margin-bottom: 6px; }
+.skill-years { font-size: 13px; color: #666; }
+
+/* ---- Recommendations ---- */
+
+.recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.recommendation {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 18px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.recommendation p { font-style: italic; margin-bottom: 8px; }
+.rec-author { font-size: 12px; color: #888; }
+
+.new-recommendation {
+  border-color: #6b21a8;
+  background: #f9f5ff;
+}
+
+/* ---- Form ---- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 500px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+form textarea { min-height: 120px; resize: vertical; }
+
+form button {
+  align-self: flex-start;
+  background: #fff;
+  border: 1px solid #6b21a8;
+  color: #6b21a8;
+  padding: 10px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+form button:hover { background: #6b21a8; color: #fff; }
+
+/* ---- Popup ---- */
+
+.popup {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #6b21a8;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 6px;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Footer ---- */
+
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  padding: 20px;
+}
