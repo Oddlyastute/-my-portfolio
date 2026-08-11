@@ -10,74 +10,86 @@ a { text-decoration: none; color: inherit; }
 
 /* ---- Header / Nav ---- */
 
+/* =====================================
+   HEADER FIX
+   ===================================== */
+
 header {
-  background: #6b21a8;
-  color: #fff;
-  padding: 20px 40px;
+  background-color: #6f28ad;
+  color: white;
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  position: relative;
+  justify-content: space-between;
+
+  padding: 20px 30px;
+  min-height: 100px;
+}
+
+.profile {
+  flex-shrink: 0;
 }
 
 .profile_name {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  color: #ffffff;
+  margin: 0 0 5px;
 }
 
-header .profile p {
-  font-size: 13px;
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  margin-top: 4px;
-  opacity: 0.9;
-}
-
-.contact-icon {
-  width: 14px;
-  height: 14px;
-  vertical-align: middle;
-  filter: brightness(0) invert(1); /* renders the icon white to match the header text */
+.profile p {
+  margin: 0;
 }
 
 .navbar {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-left: auto;
 }
 
 .nav-links {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 35px;
 }
 
-#theme-toggle {
-    margin-left: auto;
+.nav-links a {
+  color: white;
+  text-decoration: none;
 }
 
-.iconbutton {
-  font-size: 22px;
+/* =====================================
+   DARK MODE BUTTON
+   ===================================== */
+
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+
+  background: transparent;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin-left: 25px;
+
+  cursor: pointer;
+
+  font-size: 25px;
   line-height: 1;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: background 0.15s ease;
 }
 
-.iconbutton:hover {
-  background: rgba(255, 255, 255, 0.15);
+.theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
+#theme-icon {
+  display: block;
+}
 /* ---- Sections ---- */
 
 section {
