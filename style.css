@@ -45,16 +45,25 @@ header .profile p {
   filter: brightness(0) invert(1); /* renders the icon white to match the header text */
 }
 
-header nav {
-  display: flex;
-  gap: 28px;
-  font-size: 15px;
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
-header nav a:hover,
-.topmenu a:hover {
-  font-weight: bold;
-  text-decoration: underline;
+.nav-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#theme-toggle {
+    margin-left: auto;
 }
 
 .iconbutton {
