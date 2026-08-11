@@ -1,26 +1,34 @@
-    // showPopup is invoked here, and only here — right after a real,
-    // successful recommendation submission.
-    showPopup("Thanks! Your recommendation was added.");
-});
-
-
-// ========================================
-// LIGHT / DARK MODE
-// ========================================
+// Light / Dark Mode Toggle
 
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
 
-themeToggle.addEventListener("click", function () {
+if (themeToggle && themeIcon) {
 
-    document.body.classList.toggle("dark-mode");
+    themeToggle.addEventListener("click", function () {
 
-    if (document.body.classList.contains("dark-mode")) {
-        themeIcon.src = "dark_mode.svg";
-        themeToggle.setAttribute("aria-label", "Switch to light mode");
-    } else {
-        themeIcon.src = "light_mode.svg";
-        themeToggle.setAttribute("aria-label", "Switch to dark mode");
-    }
+        document.body.classList.toggle("dark-mode");
 
-});
+        if (document.body.classList.contains("dark-mode")) {
+
+            themeIcon.src = "dark_mode.svg";
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to light mode"
+            );
+
+        } else {
+
+            themeIcon.src = "light_mode.png";
+
+            themeToggle.setAttribute(
+                "aria-label",
+                "Switch to dark mode"
+            );
+
+        }
+
+    });
+
+}
