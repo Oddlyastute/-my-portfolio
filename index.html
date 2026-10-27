@@ -1,152 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Angie Singleton | Developer Portfolio</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible email composer demo built with HTML, CSS and JavaScript.">
+  <title>Accessible Email Composer | ang.</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-
-<a id="home"></a>
-
-<header>
-  <div class="profile">
-    <h1 class="profile_name">Angie Singleton</h1>
-    <p><img src="email.png" alt="Email" class="contact-icon"> msingleton10@gmail.com &nbsp; <img src="mobile.png" alt="Phone" class="contact-icon"> 713-581-0142</p>
-  </div>
-
-  <nav class="topmenu">
-    <a href="#about">About Me</a>
-    <a href="#projects">Project Details</a>
-    <a href="#skills">Skills</a>
-    <a href="#recommendations">Recommendations</a>
-  </nav>
-<a href="#home" class="iconbutton header-icon" title="Back to top" aria-label="Home"> <img src="https://api.iconify.design/mdi/home.svg?color=%23ffffff" alt="Home" class="home-icon-img"> </a>
-</header>
-
-<section id="about" class="about">
-  <img src="Anj_the_dev.jpg" alt="Photo of Angie Singleton" class="profile-photo">
-  <div>
-    <h2>Hi, I'm Angie Singleton! 👋</h2>
-    <p>
-      I'm a Faith based creative and I <b>love</b> the Tech world and currently an Experience play tester for Santa Barbara Games
-      A web Designer, Graphic and Brand Designer and a Photographer.
-    </p>
-  </div>
-</section>
-
-<section id="projects">
-  <h2 class="section-title">Project Details</h2>
-
-  <div class="project">
-    <h3>Brand Identity Kits</h3>
-    <ul>
-      <li>
-        Designed done-for-you branding packages for beauty and cosmetology
-        professionals, including logos, color palettes, and social templates.
-      </li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Canva Template Line</h3>
-    <ul>
-      <li>
-        Built a set of reusable Canva templates covering profile branding
-        kits, service menus, and promotional posts for small business clients.
-      </li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Portfolio Website</h3>
-    <ul>
-      <li>
-        Designed and coded a personal portfolio site from scratch using
-        HTML and CSS to showcase design and development work.
-      </li>
-    </ul>
-  </div>
-</section>
-
-<section id="skills">
-  <h2 class="section-title">Skills</h2>
-  <div class="skills-grid">
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML logo">
-      <div class="skill-name">HTML</div>
-      <div class="skill-years">1 year experience</div>
-    </div>
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/css/663399" alt="CSS Logo">
-      <div class="skill-name">CSS</div>
-      <div class="skill-years">1 year experience</div>
-    </div>
-
-    <div class="skill">
-      <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript logo">
-      <div class="skill-name">JavaScript</div>
-      <div class="skill-years">6 months experience</div>
-    </div>
-
-    <div class="skill">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg"
-        alt="Canva logo">
-      <div class="skill-name">Canva</div>
-      <div class="skill-years">3+ years experience</div>
-    </div>
-
-    <div class="skill">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v14/icons/affinitydesigner.svg"
-        alt="Affinity Designer logo">
-      <div class="skill-name">Affinity Designer</div>
-      <div class="skill-years">2 years experience</div>
-    </div>
-
-  </div>
-</section>
-
-<section id="recommendations">
-  <h2 class="section-title">Recommendations</h2>
-  <div class="recommendations-list">
-
-    <div class="recommendation">
-      <p>"Angie has a great eye for detail and brings real polish to every design she touches."</p>
-      <span class="rec-author">— Marcus T., Creative Director</span>
-    </div>
-
-    <div class="recommendation">
-      <p>"Working with Angie was seamless — she listens closely to the brief and delivers exactly what's needed."</p>
-      <span class="rec-author">— Priya R., Salon Owner</span>
-    </div>
-
-    <div class="recommendation">
-      <p>"Angie's shift into development hasn't slowed her down one bit — she picks up new tools fast."</p>
-      <span class="rec-author">— Devon K., Web Mentor</span>
-    </div>
-
-  </div>
-</section>
-
-<section id="leave-recommendation">
-  <h2 class="section-title">Leave a Recommendation</h2>
-  <form id="recommendation-form">
-    <input type="text" id="rec-name" placeholder="Name (Optional)">
-    <textarea id="rec-message" placeholder="Message" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</section>
-
-<div id="popup" class="popup"></div>
-
-<footer>
-    <a href="#home" class="iconbutton" title="Back to top" aria-label="Home">🏠</a>
-    <p>© 2026 Angie Singleton. Built with HTML, CSS &amp; JavaScript.</p>
-  </footer>
-
-<script src="script.js"></script>
+  <a class="skip-link" href="#compose-heading">Skip to composer</a>
+  <header class="site-header"><a class="brand" href="https://github.com/Angie22-dev" aria-label="ang. GitHub profile">ang.</a><span>DESIGN + DEVELOPMENT</span></header>
+  <main class="container">
+    <div class="intro"><p class="eyebrow">FRONT-END DEVELOPMENT PROJECT</p><h1 id="compose-heading">Email, designed for <em>everyone.</em></h1><p>An accessible, responsive email composer demonstrating keyboard support, recipient validation, draft storage and a live preview.</p></div>
+    <section class="workspace" aria-label="Email composer workspace">
+      <div class="panel">
+        <div class="panel-head"><div><span class="dot" aria-hidden="true"></span><strong>New message</strong></div><span class="demo-pill">DEMO MODE</span></div>
+        <form id="compose-form" novalidate>
+          <p id="demo-note" class="notice">Portfolio demonstration only. No messages will be sent or uploaded to a server. Drafts stay in this browser.</p>
+          <div class="field"><label for="from">From <span aria-hidden="true">*</span></label><input id="from" name="from" type="email" placeholder="you@example.com" autocomplete="email" required><p class="error" id="from-error"></p></div>
+          <div class="field"><div class="field-label-row"><label for="to">To <span aria-hidden="true">*</span></label><div class="field-actions"><button class="text-button" id="toggle-cc" type="button" aria-expanded="false" aria-controls="cc-group">Add Cc</button><button class="text-button" id="toggle-bcc" type="button" aria-expanded="false" aria-controls="bcc-group">Add Bcc</button></div></div><input id="to" name="to" type="email" multiple placeholder="recipient@example.com" aria-describedby="recipient-help to-error" required><p class="hint" id="recipient-help">Use commas to separate multiple addresses.</p><p class="error" id="to-error"></p></div>
+          <div id="cc-group" class="field" hidden><label for="cc">Cc <span class="optional">(optional)</span></label><input id="cc" name="cc" type="email" multiple placeholder="copy@example.com" aria-describedby="cc-error"><p class="error" id="cc-error"></p></div>
+          <div id="bcc-group" class="field" hidden><label for="bcc">Bcc <span class="optional">(private recipients)</span></label><input id="bcc" name="bcc" type="email" multiple placeholder="private@example.com" aria-describedby="bcc-info bcc-error"><p class="hint" id="bcc-info">In a real email, Bcc recipients are hidden from other recipients. The preview below is visible only to you.</p><p class="error" id="bcc-error"></p></div>
+          <div class="field"><label for="subject">Subject <span aria-hidden="true">*</span></label><input id="subject" name="subject" placeholder="What is this email about?" maxlength="160" required aria-describedby="subject-error"><p class="error" id="subject-error"></p></div>
+          <div class="field"><label for="message">Message <span aria-hidden="true">*</span></label><textarea id="message" name="message" rows="8" placeholder="Write your message..." required aria-describedby="message-error"></textarea><p class="error" id="message-error"></p></div>
+          <div class="toolbar"><div class="button-group"><button class="primary-button" type="submit">Preview email <span aria-hidden="true">→</span></button><button type="button" class="secondary-button" id="save-draft">Save draft</button></div><button type="button" class="text-button danger" id="clear-draft">Clear</button></div>
+          <p role="status" aria-live="polite" id="status" class="status"></p>
+        </form>
+      </div>
+      <section class="preview-panel" aria-labelledby="preview-heading">
+        <div class="preview-head"><h2 id="preview-heading">Live preview</h2><span>Sender-only view</span></div>
+        <div class="preview-content"><p class="eyebrow">SUBJECT</p><h3 id="preview-subject">Your email subject</h3><dl class="meta"><div><dt>From</dt><dd id="preview-from">—</dd></div><div><dt>To</dt><dd id="preview-to">—</dd></div><div id="preview-cc-row" hidden><dt>Cc</dt><dd id="preview-cc"></dd></div><div id="preview-bcc-row" hidden><dt>Bcc</dt><dd id="preview-bcc"></dd></div></dl><div class="message-preview" id="preview-message">Your message will appear here as you type.</div></div>
+        <div class="preview-foot"><span>◉ Accessible by design</span><span>No email is sent</span></div>
+      </section>
+    </section>
+    <section class="features" aria-label="Project features"><h2>Built with purpose.</h2><div class="feature-grid"><article><h3>01 / Accessibility</h3><p>Semantic labels, keyboard-friendly controls, visible focus states, and announced validation.</p></article><article><h3>02 / Privacy</h3><p>Bcc stays in the private sender preview, with no network sending. Drafts are local to the browser.</p></article><article><h3>03 / JavaScript</h3><p>Interactive recipient fields, input checking, safe live previews, and locally saved drafts.</p></article></div></section>
+  </main>
+  <footer><span>© 2026 ang. • Portfolio demonstration</span><a href="https://github.com/Angie22-dev" rel="noopener noreferrer">GitHub ↗</a></footer>
 </body>
 </html>
